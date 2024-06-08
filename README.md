@@ -1,2 +1,3 @@
-Hospital Management System
+**Hospital Management System**
 Ayesha Arshad, Iqra Hafeez
+using:     intellij, mysql
