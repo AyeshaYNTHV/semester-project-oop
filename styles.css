@@ -1,0 +1,19 @@
+/* styles.css */
+
+/* Set the background color of the root pane to blue */
+.root {
+    -fx-background-color: lavender; /* Background color light purple */
+}
+
+/* Button style */
+.button {
+    -fx-background-color: lightblue; /* Button background color light blue */
+    -fx-text-fill: black; /* Button text color black */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: skyblue; /* Button background color light blue on hover */
+}
+
+
