@@ -5,109 +5,109 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="617.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.MainController">
-  <children>
-    <!-- Patient Management -->
-    <Label layoutX="14.0" layoutY="14.0" text="Patient Management" />
-    <TextField fx:id="patientNameField" layoutX="14.0" layoutY="40.0" promptText="Name" />
-    <TextField fx:id="patientAgeField" layoutX="14.0" layoutY="70.0" promptText="Age" />
-    <TextField fx:id="patientAddressField" layoutX="14.0" layoutY="100.0" promptText="Address" />
-    <TextField fx:id="patientPhoneField" layoutX="14.0" layoutY="130.0" promptText="Phone" />
-    <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="25.0" prefWidth="80.0" text="Add Patient" />
+<AnchorPane prefHeight="617.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.semesterproject.MainController" stylesheets="@styles.css">
+    <children>
+        <!-- Patient Management -->
+        <Label layoutX="14.0" layoutY="14.0" text="Patient Management" />
+        <TextField fx:id="patientNameField" layoutX="14.0" layoutY="40.0" promptText="Name" />
+        <TextField fx:id="patientAgeField" layoutX="14.0" layoutY="70.0" promptText="Age" />
+        <TextField fx:id="patientAddressField" layoutX="14.0" layoutY="100.0" promptText="Address" />
+        <TextField fx:id="patientPhoneField" layoutX="14.0" layoutY="130.0" promptText="Phone" />
+        <Button layoutX="14.0" layoutY="160.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addPatient" prefHeight="25.0" prefWidth="80.0" text="Add Patient" />
 
-    <Label layoutX="14.0" layoutY="200.0" text="Update Patient" />
-    <TextField fx:id="patientIdField" layoutX="14.0" layoutY="220.0" promptText="ID" />
-    <TextField fx:id="updatePatientNameField" layoutX="14.0" layoutY="250.0" promptText="New Name" />
-    <TextField fx:id="updatePatientAgeField" layoutX="14.0" layoutY="280.0" promptText="New Age" />
-    <TextField fx:id="updatePatientAddressField" layoutX="14.0" layoutY="310.0" promptText="New Address" />
-    <TextField fx:id="updatePatientPhoneField" layoutX="14.0" layoutY="340.0" promptText="New Phone" />
-    <Button layoutX="14.0" layoutY="370.0" mnemonicParsing="false" onAction="#updatePatient" text="Update Patient" />
+        <Label layoutX="14.0" layoutY="200.0" text="Update Patient" />
+        <TextField fx:id="patientIdField" layoutX="14.0" layoutY="220.0" promptText="ID" />
+        <TextField fx:id="updatePatientNameField" layoutX="14.0" layoutY="250.0" promptText="New Name" />
+        <TextField fx:id="updatePatientAgeField" layoutX="14.0" layoutY="280.0" promptText="New Age" />
+        <TextField fx:id="updatePatientAddressField" layoutX="14.0" layoutY="310.0" promptText="New Address" />
+        <TextField fx:id="updatePatientPhoneField" layoutX="14.0" layoutY="340.0" promptText="New Phone" />
+        <Button layoutX="14.0" layoutY="370.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#updatePatient" text="Update Patient" />
 
-    <TableView fx:id="patientTable" layoutX="210.0" layoutY="147.0" prefHeight="125.0" prefWidth="580.0">
-      <columns>
-        <TableColumn fx:id="patientIdColumn" prefWidth="100.0" text="ID" />
-        <TableColumn fx:id="patientNameColumn" prefWidth="100.0" text="Name" />
-        <TableColumn fx:id="patientAgeColumn" prefWidth="100.0" text="Age" />
-        <TableColumn fx:id="patientAddressColumn" prefWidth="140.0" text="Address" />
-        <TableColumn fx:id="patientPhoneColumn" prefWidth="140.0" text="Phone" />
-      </columns>
-    </TableView>
+        <TableView fx:id="patientTable" layoutX="210.0" layoutY="147.0" prefHeight="125.0" prefWidth="580.0">
+            <columns>
+                <TableColumn fx:id="patientIdColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="patientNameColumn" prefWidth="100.0" text="Name" />
+                <TableColumn fx:id="patientAgeColumn" prefWidth="100.0" text="Age" />
+                <TableColumn fx:id="patientAddressColumn" prefWidth="140.0" text="Address" />
+                <TableColumn fx:id="patientPhoneColumn" prefWidth="140.0" text="Phone" />
+            </columns>
+        </TableView>
 
-    <!-- Doctor Management -->
-    <Label layoutX="14.0" layoutY="430.0" text="Doctor Management" />
-    <TextField fx:id="doctorNameField" layoutX="14.0" layoutY="450.0" promptText="Name" />
-    <TextField fx:id="doctorSpecializationField" layoutX="14.0" layoutY="480.0" promptText="Specialization" />
-    <TextField fx:id="doctorPhoneField" layoutX="14.0" layoutY="510.0" promptText="Phone" />
-    <Button layoutX="14.0" layoutY="540.0" mnemonicParsing="false" onAction="#addDoctor" text="Add Doctor" />
+        <!-- Doctor Management -->
+        <Label layoutX="14.0" layoutY="430.0" text="Doctor Management" />
+        <TextField fx:id="doctorNameField" layoutX="14.0" layoutY="450.0" promptText="Name" />
+        <TextField fx:id="doctorSpecializationField" layoutX="14.0" layoutY="480.0" promptText="Specialization" />
+        <TextField fx:id="doctorPhoneField" layoutX="14.0" layoutY="510.0" promptText="Phone" />
+        <Button layoutX="14.0" layoutY="540.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addDoctor" text="Add Doctor" />
 
-    <TableView fx:id="doctorTable" layoutX="209.0" layoutY="312.0" prefHeight="111.0" prefWidth="580.0">
-      <columns>
-        <TableColumn fx:id="doctorIdColumn" prefWidth="50.0" text="ID" />
-        <TableColumn fx:id="doctorNameColumn" prefWidth="150.0" text="Name" />
-        <TableColumn fx:id="doctorSpecializationColumn" prefWidth="150.0" text="Specialization" />
-        <TableColumn fx:id="doctorPhoneColumn" prefWidth="100.0" text="Phone" />
-      </columns>
-    </TableView>
+        <TableView fx:id="doctorTable" layoutX="209.0" layoutY="312.0" prefHeight="111.0" prefWidth="580.0">
+            <columns>
+                <TableColumn fx:id="doctorIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="doctorNameColumn" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="doctorSpecializationColumn" prefWidth="150.0" text="Specialization" />
+                <TableColumn fx:id="doctorPhoneColumn" prefWidth="100.0" text="Phone" />
+            </columns>
+        </TableView>
 
-    <!-- Appointment Management -->
-    <Label layoutX="236.0" layoutY="481.0" text="Appointment Management" />
-    <TextField fx:id="appointmentPatientIdField" layoutX="403.0" layoutY="477.0" promptText="Patient ID" />
-    <TextField fx:id="appointmentDoctorIdField" layoutX="403.0" layoutY="506.0" promptText="Doctor ID" />
-    <TextField fx:id="appointmentDateField" layoutX="565.0" layoutY="477.0" promptText="Date (YYYY-MM-DD)" />
-    <TextField fx:id="appointmentTimeField" layoutX="565.0" layoutY="506.0" promptText="Time (HH:MM)" />
-    <Button layoutX="273.0" layoutY="506.0" mnemonicParsing="false" onAction="#addAppointment" text="Add Appointment" />
-
-    <!-- Staff Management -->
-    <Label layoutX="879.0" layoutY="302.0" text="Add Staff" />
-    <TextField fx:id="staffNameField" layoutX="823.0" layoutY="323.0" promptText="Name" />
-    <TextField fx:id="staffRoleField" layoutX="823.0" layoutY="353.0" promptText="Role" />
-    <TextField fx:id="staffPhoneField" layoutX="823.0" layoutY="383.0" promptText="Phone" />
-    <Button layoutX="824.0" layoutY="408.0" mnemonicParsing="false" onAction="#addStaff" text="Add Staff" />
-
-    <!-- Department Management -->
-    <Label layoutX="857.0" layoutY="14.0" text="Add Department" />
-    <TextField fx:id="departmentNameField" layoutX="827.0" layoutY="32.0" promptText="Name" />
-    <TextField fx:id="departmentDescriptionField" layoutX="827.0" layoutY="60.0" promptText="Description" />
-    <Button layoutX="828.0" layoutY="88.0" mnemonicParsing="false" onAction="#addDepartment" text="Add Department" />
-
-    <!-- Room Management -->
-    <Label layoutX="873.0" layoutY="139.0" text="Add Room" />
-    <TextField fx:id="roomNumberField" layoutX="826.0" layoutY="160.0" promptText="Room Number" />
-    <TextField fx:id="roomCapacityField" layoutX="826.0" layoutY="188.0" promptText="Capacity" />
-    <ChoiceBox fx:id="roomDepartmentChoice" layoutX="826.0" layoutY="220.0" />
-    <Button layoutX="824.0" layoutY="255.0" mnemonicParsing="false" onAction="#addRoom" text="Add Room" />
-
-    <!-- Bill Management -->
-    <Button fx:id="billingButton" layoutX="406.0" layoutY="552.0" mnemonicParsing="false" onAction="#openBillingForm" prefHeight="49.0" prefWidth="149.0" text="Billing" visible="false" />
+        <!-- Appointment Management -->
+        <Label layoutX="236.0" layoutY="481.0" text="Appointment Management" />
+        <TextField fx:id="appointmentPatientIdField" layoutX="403.0" layoutY="477.0" promptText="Patient ID" />
+        <TextField fx:id="appointmentDoctorIdField" layoutX="403.0" layoutY="506.0" promptText="Doctor ID" />
+        <TextField fx:id="appointmentDateField" layoutX="565.0" layoutY="477.0" promptText="Date (YYYY-MM-DD)" />
+        <TextField fx:id="appointmentTimeField" layoutX="565.0" layoutY="506.0" promptText="Time (HH:MM)" />
+        <Button layoutX="273.0" layoutY="506.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addAppointment" text="Add Appointment" />
 
 
-    <!-- Report Generation -->
-    <VBox layoutX="835.0" layoutY="472.0" prefHeight="49.0" prefWidth="134.0">
-      <padding>
-        <Insets bottom="10" left="10" right="10" top="10" />
-      </padding>
-      <Button fx:id="generateReportButton" prefHeight="25.0" prefWidth="119.0" text="Generate Report" />
-    </VBox>
+        <!-- Staff Management -->
+        <Label layoutX="879.0" layoutY="302.0" text="Add Staff" />
+        <TextField fx:id="staffNameField" layoutX="823.0" layoutY="323.0" promptText="Name" />
+        <TextField fx:id="staffRoleField" layoutX="823.0" layoutY="353.0" promptText="Role" />
+        <TextField fx:id="staffPhoneField" layoutX="823.0" layoutY="383.0" promptText="Phone" />
+        <Button layoutX="824.0" layoutY="408.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addStaff" text="Add Staff" />
+
+        <!-- Department Management -->
+        <Label layoutX="857.0" layoutY="14.0" text="Add Department" />
+        <TextField fx:id="departmentNameField" layoutX="827.0" layoutY="32.0" promptText="Name" />
+        <TextField fx:id="departmentDescriptionField" layoutX="827.0" layoutY="60.0" promptText="Description" />
+        <Button layoutX="828.0" layoutY="88.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addDepartment" text="Add Department" />
 
 
-    <Label layoutX="223.0" layoutY="87.0" text="Administrator Login" />
-    <TextField fx:id="adminUsernameField" layoutX="353.0" layoutY="86.0" promptText="Username" />
-    <PasswordField fx:id="adminPasswordField" layoutX="514.0" layoutY="86.0" promptText="Password" />
-    <Button layoutX="675.0" layoutY="86.0" mnemonicParsing="false" onAction="#loginAsAdmin" text="Login" />
-    <Label layoutX="212.0" layoutY="16.0" prefHeight="56.0" prefWidth="580.0" text="HOSPITAL MANAGEMENT SYSTEM" textFill="#1e1d1d">
-      <font>
-        <Font size="36.0" />
-      </font>
-    </Label>
-    <Label layoutX="209.0" layoutY="122.0" prefHeight="17.0" prefWidth="149.0" text="Patient view:">
-      <font>
-        <Font size="16.0" />
-      </font>
-    </Label>
-    <Label layoutX="212.0" layoutY="290.0" prefHeight="17.0" prefWidth="144.0" text="Doctors view:">
-      <font>
-        <Font size="16.0" />
-      </font>
-    </Label>
-  </children>
+        <!-- Room Management -->
+        <Label layoutX="873.0" layoutY="139.0" text="Add Room" />
+        <TextField fx:id="roomNumberField" layoutX="826.0" layoutY="160.0" promptText="Room Number" />
+        <TextField fx:id="roomCapacityField" layoutX="826.0" layoutY="188.0" promptText="Capacity" />
+        <ChoiceBox fx:id="roomDepartmentChoice" layoutX="826.0" layoutY="220.0" />
+        <Button layoutX="824.0" layoutY="255.0" style="-fx-background-color: lightblue;" mnemonicParsing="false" onAction="#addRoom" text="Add Room" />
+
+        <!-- Bill Management -->
+        <Button fx:id="billingButton" layoutX="406.0" layoutY="552.0" mnemonicParsing="false" onAction="#openBillingForm" prefHeight="49.0" prefWidth="149.0" text="Billing" visible="false" />
+
+        <!-- Report Generation -->
+        <VBox layoutX="835.0" layoutY="472.0" prefHeight="49.0" prefWidth="134.0">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <Button fx:id="generateReportButton" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: lightblue;" text="Generate Report" />
+        </VBox>
+
+        <Label layoutX="223.0" layoutY="87.0" text="Administrator Login" />
+        <TextField fx:id="adminUsernameField" layoutX="353.0" layoutY="86.0" promptText="Username" />
+        <PasswordField fx:id="adminPasswordField" layoutX="514.0" layoutY="86.0" promptText="Password" />
+        <Button layoutX="675.0" layoutY="86.0" mnemonicParsing="false" onAction="#loginAsAdmin" text="Login" />
+        <Label layoutX="212.0" layoutY="16.0" prefHeight="56.0" prefWidth="580.0" text="HOSPITAL MANAGEMENT SYSTEM" textFill="#1e1d1d">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="209.0" layoutY="122.0" prefHeight="17.0" prefWidth="149.0" text="Patient view:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="212.0" layoutY="290.0" prefHeight="17.0" prefWidth="144.0" text="Doctors view:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+    </children>
 </AnchorPane>
